@@ -12,8 +12,6 @@ filters = '[!"#$%&()*+,-./:;<=>?@[\\]^_`{|}~\t\n' + '！，；：。？、“”
 filters_1 = "[\.\!\/_,?;:$%^*<>()+\"\']+|[！，；：。？、“”’‘《》（）~@#￥%……&*\（\）\/\-]+"
 
 """去除标点符号、空格"""
-
-
 def clear_punctuation(text):
     """去除标点符号"""
     sentence = text.replace(' ', '')
@@ -21,10 +19,7 @@ def clear_punctuation(text):
     sentence_punctuation_clear_replace = sentence_punctuation_clear.replace('   ', ' ').replace('  ', ' ')
     return sentence_punctuation_clear_replace
 
-
 '''截取中文、拼音、数字，去除特殊字符等'''
-
-
 def getChinese1(ques):
     # ques = '•“鑫菁英”教育分期手续费怎么收取？可以'
     findAllChinese = ''.join(re.findall(u"([\u4e00-\u9fa50-9A-Za-z])", ques))
