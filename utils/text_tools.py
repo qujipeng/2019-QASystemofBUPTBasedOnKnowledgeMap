@@ -21,7 +21,7 @@ def clear_punctuation(text):
 
 '''截取中文、拼音、数字，去除特殊字符等'''
 def getChinese1(ques):
-    # ques = '•“鑫菁英”教育分期手续费怎么收取？可以'
+    # ques = '“格力电器今天的股价是多少'
     findAllChinese = ''.join(re.findall(u"([\u4e00-\u9fa50-9A-Za-z])", ques))
     # print(sub_str)
     return findAllChinese
